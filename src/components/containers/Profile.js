@@ -1,5 +1,5 @@
 import React from 'react';
-import TranslatorTable from '../TranslatorTable';
+import TranslatorTable from '../ui/TranslatorTable';
 
 const Profile = () => {
     return (

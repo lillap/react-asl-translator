@@ -1,5 +1,5 @@
 import React from 'react';
-import { getStorage } from '../utils/localstorage';
+import { getStorage } from '../../utils/localstorage';
 
 const TranslatorTable = props => {
 
