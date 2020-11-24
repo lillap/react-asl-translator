@@ -3,12 +3,20 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Login from './components/containers/Login'
+import Translator from './components/containers/Translator'
+import Profile from './components/containers/Profile'
 
 function App() {
   return (
-    <div className="App">
-      <Login/>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/login" component={ Login }/>
+          <Route path="/translator" component={ Translator }/>
+          <Route path="/profile" component={ Profile }/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
