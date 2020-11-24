@@ -1,8 +1,13 @@
 import React from 'react';
+import TranslatorForm from '../forms/TranslatorForm';
 
 const Translator = () => {
     return (
-        <h1>Translator</h1>
+        <div>
+            <h1>Translator</h1>
+            <TranslatorForm/>
+        </div>
+      
     )
 }
 
