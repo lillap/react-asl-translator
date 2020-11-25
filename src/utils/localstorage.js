@@ -12,3 +12,7 @@ export const getStorage = (key) => {
     return value;
     
 }
+
+export const clearStorage = () => {
+    localStorage.clear();
+} 
