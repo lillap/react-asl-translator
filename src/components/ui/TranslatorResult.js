@@ -16,7 +16,9 @@ const TranslatorResult = props => {
 
     useEffect (() => {
         if (input) {
-            saveTranslation(input);
+            let value = input;
+            value = value.replace(/_/g, ' ').toLowerCase();
+            saveTranslation(value);
         }
     });
     const saveTranslation = (input) => { 

@@ -6,18 +6,20 @@ const TranslatorForm = props => {
     const [inputError, setInputError] = useState(false);
     
     const onTranslateClick = () => {
-
-        props.makeTranslation(translation); 
+        if (!inputError) {
+            props.makeTranslation(translation);
+        } else console.log("not sending");
     }
 
     // validate if allowed characters and if allowed length
     const onTranslatorChange = event => {
         let value = event.target.value;
 
-        if(!value.match(/^[A-Za-z]+$/)) {
+        if(!value.match(/^[A-Za-z ]+$/)) {
             setInputError(true);
         } else {
             setInputError(false);
+            value = value.replace(/\s+/g, '_').toLowerCase();
             setTranslation(value);
         }
     }; 
@@ -32,7 +34,7 @@ const TranslatorForm = props => {
             <div>
                 <button type="button" disabled={inputError} onClick={onTranslateClick}>Translate!</button>
             </div>
-            {inputError && <p>This form only accepts a-zA-Z</p>}
+            {inputError && <p>This form only accepts A-z</p>}
         </form> 
     )
 }
