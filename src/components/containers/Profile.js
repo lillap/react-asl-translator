@@ -1,5 +1,7 @@
 import React from 'react';
-import TranslatorTable from '../TranslatorTable';
+import TranslatorTable from '../ui/TranslatorTable';
+
+// create some sort of link to translator-page and a logout/clear localstorage-button
 
 const Profile = () => {
     return (
