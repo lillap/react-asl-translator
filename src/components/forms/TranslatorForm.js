@@ -5,10 +5,11 @@ const TranslatorForm = props => {
     const [translation, setTranslation] = useState('');
     
     const onTranslateClick = () => {
-        props.makeTranslation(translation);
+        props.makeTranslation(translation); 
     }
 
-    const onTranslatorChange = event => setTranslation(event.target.value);
+    // validate if allowed characters and if allowed length
+    const onTranslatorChange = event => setTranslation(event.target.value); 
     
     return (
         <form>
@@ -19,7 +20,7 @@ const TranslatorForm = props => {
             <div>
                 <button type="button" onClick={onTranslateClick}>Translate!</button>
             </div>
-        </form>
+        </form> 
     )
 }
 

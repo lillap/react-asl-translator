@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TranslatorForm from '../forms/TranslatorForm';
-import { setStorage, getStorage } from '../../utils/localstorage';
+import { getStorage } from '../../utils/localstorage';
 import { Redirect } from 'react-router-dom';
 import TranslatorResult from '../ui/TranslatorResult';
 
 const Translator = () => {
     const user = getStorage('session');
+    const [currentTranslation, setCurrentTranslation] = useState('');
 
     const handleTranslationClick = (input) => {
-        setStorage('currentTranslation', input);
+        setCurrentTranslation(input);
     }
  
     return (
@@ -16,9 +17,8 @@ const Translator = () => {
             {!user && <Redirect to="/login"/>}
             <h1>Translator</h1>
             <TranslatorForm makeTranslation={event => handleTranslationClick(event)}/>
-            <TranslatorResult />
+            <TranslatorResult input={currentTranslation} />
         </div>
     )
 }
- // Render translatorresult on update?
 export default Translator;
