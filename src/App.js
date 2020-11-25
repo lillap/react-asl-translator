@@ -10,11 +10,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          <Route path="/login" component={ Login }/>
-          <Route path="/translator" component={ Translator }/>
-          <Route path="/profile" component={ Profile }/>
-        </Switch>
+        <div className="App-header">
+          <Switch>
+            <Route path="/login" component={ Login }/>
+            <Route path="/translator" component={ Translator }/>
+            <Route path="/profile" component={ Profile }/>
+          </Switch>
+        </div>
       </div>
     </Router>
   );

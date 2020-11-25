@@ -11,6 +11,8 @@ const Translator = () => {
     const handleTranslationClick = (input) => {
         setCurrentTranslation(input);
     }
+
+    // create some sort of redirect to profile-page
  
     return (
         <div>
