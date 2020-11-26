@@ -6,13 +6,17 @@ import Login from './components/containers/Login'
 import Translator from './components/containers/Translator'
 import Profile from './components/containers/Profile'
 import NotFound from './components/containers/NotFound';
+import Header from './components/ui/Header';
 
 function App() {
+
+
+  
 
   return (
     <Router>
       <div className="App">
-        <div className="App-header">
+        <Header/>
           <Switch>
             <Route exact path="/">
               <Redirect from="/" to="/login" />
@@ -21,9 +25,7 @@ function App() {
             <Route exact path="/translator" component={ Translator }/>
             <Route exact path="/profile" component={ Profile }/>
             <Route path="*" component={NotFound}/>
-         
           </Switch>
-        </div>
       </div>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
-import Redirect from '../redirect';
+import {Redirect} from 'react-router-dom';
 import { getStorage } from '../../utils/localstorage'
+import ProfileButtons from '../ui/redirectButtons/ProfileButtons';
 import TranslatorTable from '../ui/TranslatorTable';
 
 // create some sort of link to translator-page
@@ -10,10 +11,10 @@ const Profile = () => {
 
     return (
         <div>
+            <ProfileButtons/>
             {!user && <Redirect to="/login"/>}
-            <h1>Profile</h1>
+            <h1>{user}</h1>
             <TranslatorTable/>
-            <Redirect />
         </div>
        
     )
