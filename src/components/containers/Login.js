@@ -17,7 +17,7 @@ const Login = () => {
     return (
         <div>
             {user && <Redirect to="/translator"/>}
-            <h1>Log in</h1>
+            <h3>Login</h3>
             <LoginForm clickLogin={event => handleLoginClicked(event)}/>
         </div>
     )

@@ -11,7 +11,7 @@ const TranslatorResult = props => {
     const characters = Array.from(input);
 
     const signCharacters = characters.map((character, index) => 
-        <img src={images[character.toLowerCase()]} alt="1" key={index}/>
+        <img className="img-fluid" src={images[character.toLowerCase()]} alt="1" key={index}/>
     );
 
     useEffect (() => {

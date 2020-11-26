@@ -10,10 +10,6 @@ const Header = () => {
     <Jumbotron fluid className="text-center" style={headerBackground}>
         <Container>
             <h1>ASL TRANSLATOR</h1>
-            <p>
-            This is a modified jumbotron that occupies the entire horizontal space of
-            its parent.
-            </p>
         </Container>
     </Jumbotron>
   )
