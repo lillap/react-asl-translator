@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { clearStorage, getStorage } from '../../../utils/localstorage';
+import { clearStorage } from '../../../utils/localstorage';
 
 const ProfileButtons = () => {
     
-
     const history = useHistory();
 
-    const logOut = () => {
+    const logOut = () => { // Log out
         clearStorage();
         history.replace('/login');
     }
 
-    const goBack = () => {
+    const goToTranslator = () => { // Go to translator-page
         history.replace('/translator');
     }
 
     return (
         
             <div>
-                <button type="button" onClick={goBack}>Back to translation page</button>
+                <button type="button" onClick={goToTranslator}>Translation page</button>
                 <button type="button" onClick={logOut}>Log out</button>
             </div>
         

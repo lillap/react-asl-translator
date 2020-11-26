@@ -1,18 +1,17 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { clearStorage} from '../../../utils/localstorage';
+import { clearStorage } from '../../../utils/localstorage';
 
 const TranslatorButtons = () => {
     
-
     const history = useHistory();
 
-    const logOut = () => {
+    const logOut = () => { // Log out
         clearStorage();
         history.replace('/login');
     }
 
-    const goToProfile = () => {
+    const goToProfile = () => { // Go to profile-page
         history.replace('/profile');
     }
 

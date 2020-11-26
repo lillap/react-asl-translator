@@ -4,7 +4,7 @@ import HeaderBackground from '../../resources/header-bg2.jpg'
 
 const Header = () => {
 
-  const headerBackground = {background: "url("+ HeaderBackground +")"}
+  const headerBackground = {background: "url("+ HeaderBackground +")"}; // get header-background image
 
   return (
     <Jumbotron fluid className="text-center" style={headerBackground}>
