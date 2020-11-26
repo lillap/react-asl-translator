@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import Login from './components/containers/Login'
 import Translator from './components/containers/Translator'
 import Profile from './components/containers/Profile'
+import NotFound from './components/containers/NotFound';
 
 function App() {
 
@@ -13,10 +14,14 @@ function App() {
       <div className="App">
         <div className="App-header">
           <Switch>
+            <Route exact path="/">
+              <Redirect from="/" to="/login" />
+            </Route>
+            <Route exact path="/login" component={ Login }/>
             <Route exact path="/translator" component={ Translator }/>
             <Route exact path="/profile" component={ Profile }/>
-            <Route exact path="/login" component={ Login }/>
-            <Redirect from="/" to="/login" />
+            <Route path="*" component={NotFound}/>
+         
           </Switch>
         </div>
       </div>
