@@ -1,9 +1,10 @@
-export const setStorage = (key, value) => {
+export const setStorage = (key, value) => { // function for setting localstorage
 
     localStorage.setItem(key, JSON.stringify(value));
+
 } 
 
-export const getStorage = (key) => {
+export const getStorage = (key) => { // function for getting localstorage
 
     let value = JSON.parse(localStorage.getItem(key));
 
@@ -13,6 +14,6 @@ export const getStorage = (key) => {
     
 }
 
-export const clearStorage = () => {
+export const clearStorage = () => { // function for clearing localstorage
     localStorage.clear();
 } 

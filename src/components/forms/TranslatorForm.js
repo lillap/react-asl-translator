@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 const TranslatorForm = props => {
 
-    const [translation, setTranslation] = useState('');
-    const [inputError, setInputError] = useState(false);
+    const [translation, setTranslation] = useState(''); // current input
+    const [inputError, setInputError] = useState(false); // validation of current input
     
     const onTranslateClick = () => {
         if (!inputError) {
@@ -11,15 +11,15 @@ const TranslatorForm = props => {
         } else console.log("not sending");
     }
 
-    // validate if allowed characters and if allowed length
-    const onTranslatorChange = event => {
+    
+    const onTranslatorChange = event => { // validate if input contains only allowed characters
         let value = event.target.value;
 
-        if(!value.match(/^[A-Za-z ]+$/)) {
+        if(!value.match(/^[A-Za-z ]+$/)) { // accept only letters and spaces
             setInputError(true);
         } else {
             setInputError(false);
-            value = value.replace(/\s+/g, '_').toLowerCase();
+            value = value.replace(/\s+/g, '_').toLowerCase(); // spaces are being replaced with underscores
             setTranslation(value);
         }
     }; 

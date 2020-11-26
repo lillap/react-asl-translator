@@ -8,9 +8,8 @@ const Login = () => {
     const user = getStorage('session');
     const history = useHistory();
 
-    const handleLoginClicked = (username) => {
-        setStorage('session', username);
-
+    const handleLoginClicked = (username) => { // add user to current session and redirect to translator-page
+        setStorage('session', username); 
         history.replace('/translator');
     };
 

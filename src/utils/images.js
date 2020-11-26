@@ -25,6 +25,6 @@ import x from '../resources/x.png'
 import y from '../resources/y.png'
 import z from '../resources/z.png'
 import _ from '../resources/_.png'
-const images = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,_};
+const images = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,_}; // an object that contains all images used for translation
 
 export default images;
