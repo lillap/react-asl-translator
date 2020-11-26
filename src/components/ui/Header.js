@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
-import HeaderBackground from '../../resources/header-bg2.jpg'
+import HeaderBackground from '../../resources/header-bg.jpg'
 
 const Header = () => {
 
