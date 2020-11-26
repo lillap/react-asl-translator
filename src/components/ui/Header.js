@@ -1,30 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
-import { getStorage } from '../../utils/localstorage';
-import ProfileButtons from './redirectButtons/ProfileButtons';
+import HeaderBackground from '../../resources/header-bg2.jpg'
 
 const Header = () => {
 
-    // const [userExists, setUserExists] = useState(false);
-
-    // useEffect (() => {
-    //     if (getStorage('session')) {
-    //         setUserExists(true); 
-    //     } else {
-    //         setUserExists(false);
-    //     }
-    // }, []);
+  const headerBackground = {background: "url("+ HeaderBackground +")"}
 
   return (
-    <Jumbotron fluid>
+    <Jumbotron fluid className="text-center" style={headerBackground}>
         <Container>
-            <h1>Fluid jumbotron</h1>
+            <h1>ASL TRANSLATOR</h1>
             <p>
             This is a modified jumbotron that occupies the entire horizontal space of
             its parent.
             </p>
-
-
         </Container>
     </Jumbotron>
   )

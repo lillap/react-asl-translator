@@ -10,13 +10,10 @@ import Header from './components/ui/Header';
 
 function App() {
 
-
-  
-
   return (
     <Router>
+      <Header/>
       <div className="App">
-        <Header/>
           <Switch>
             <Route exact path="/">
               <Redirect from="/" to="/login" />

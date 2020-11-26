@@ -19,11 +19,10 @@ const TranslatorTable = () => {
     </tr>
     ); 
 
-
-
     return (
         <div>
             <h4>Saved Translations</h4>
+            {!translations.length > 0 ? <p>No translations.</p> : 
             <table>
                 <thead>
                     <tr>
@@ -35,8 +34,7 @@ const TranslatorTable = () => {
                 <tbody>
                     {listItems}
                 </tbody>
-            </table>
-            {!translations.length > 0 && <p>No translations.</p>}
+            </table>}
         </div>
         
     )

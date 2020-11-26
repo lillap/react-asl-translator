@@ -19,8 +19,8 @@ const TranslatorButtons = () => {
     return (
         
             <div>
-                <button type="button" onClick={logOut}>Log out.</button>
                 <button type="button" onClick={goToProfile}>Profile page</button>
+                <button type="button" onClick={logOut}>Log out</button>
             </div>
         
     )
