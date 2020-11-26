@@ -19,8 +19,8 @@ const ProfileButtons = () => {
     return (
         
             <div>
-                <button type="button" onClick={logOut}>Log out</button>
                 <button type="button" onClick={goBack}>Back to translation page</button>
+                <button type="button" onClick={logOut}>Log out</button>
             </div>
         
     )
