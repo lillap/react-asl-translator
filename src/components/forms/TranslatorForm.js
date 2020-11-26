@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container, Form } from 'react-bootstrap';
 
 const TranslatorForm = props => {
 
@@ -25,17 +26,21 @@ const TranslatorForm = props => {
     }; 
     
     return (
-        <form>
-            <div>
-                <label>Translate: </label>
-                <input type="text" placeholder="Enter your word to translate..."
-                    onChange={onTranslatorChange} maxLength={40}/>
+        <Container>
+        <Form>
+            <div className="form-group row">
+                <label className="col-sm-2 col-form-label">Translate: </label>
+                <div className="col-sm-8">
+                    <input className="form-control" type="text" placeholder="Enter a word or sentence..."
+                        onChange={onTranslatorChange} maxLength={40}/>
+                </div>
             </div>
-            <div>
-                <button type="button" disabled={inputError} onClick={onTranslateClick}>Translate!</button>
+            <div className="text-center">
+                <button className="btn btn-lg btn-light" type="button" disabled={inputError} onClick={onTranslateClick}>Translate!</button>
             </div>
             {inputError && <p>This form only accepts A-z</p>}
-        </form> 
+        </Form> 
+        </Container>
     )
 }
 

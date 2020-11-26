@@ -3,7 +3,7 @@ import TranslatorForm from '../forms/TranslatorForm';
 import { getStorage } from '../../utils/localstorage';
 import { Redirect } from 'react-router-dom';
 import TranslatorResult from '../ui/TranslatorResult';
-import TranslatorButtons from '../ui/redirectButtons/TranslatorButtons';
+import TranslatorButtons from '../ui/buttons/TranslatorButtons';
 
 const Translator = () => { // redirects to login-page if no user is found in session
     const user = getStorage('session');
@@ -17,7 +17,7 @@ const Translator = () => { // redirects to login-page if no user is found in ses
         <div>
             <TranslatorButtons/>
             {!user && <Redirect to="/login"/>}
-            <h1>Translator</h1> 
+            <h3>Translator</h3> 
             <TranslatorForm makeTranslation={event => handleTranslationClick(event)}/>
             <TranslatorResult input={currentTranslation} />
         </div>

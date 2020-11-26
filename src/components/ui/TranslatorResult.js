@@ -10,8 +10,9 @@ const TranslatorResult = props => {
 
     const characters = Array.from(input); // create array of characters from input value
 
+
     const signCharacters = characters.map((character, index) => // for each character, create an img tag that takes the image from an object called images
-        <img src={images[character.toLowerCase()]} alt="1" key={index}/>
+        <img className="img-fluid" src={images[character.toLowerCase()]} alt="1" key={index}/>
     );
 
     useEffect (() => {

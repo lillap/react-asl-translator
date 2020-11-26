@@ -1,0 +1,15 @@
+#savedTranslationsTable {
+    margin: 0 auto;
+    width: 82%;
+}
+
+#wordToTranslate {
+text-align:center;
+vertical-align: middle;
+color: 	#f7f7f7;
+}
+
+
+#translation{
+    vertical-align: left; 
+}
