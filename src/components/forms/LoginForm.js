@@ -8,9 +8,9 @@ const LoginForm = props => {
 
     const onLoginClicked = () => {
         props.clickLogin(username);
-    }
+    } // pass the username-variable to the parent using props
     
-    const onUsernameChange = event => setUsername(event.target.value);
+    const onUsernameChange = event => setUsername(event.target.value); // set state-variable to the value contained in the input-field
 
     return (
         <Container>

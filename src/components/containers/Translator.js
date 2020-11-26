@@ -5,11 +5,11 @@ import { Redirect } from 'react-router-dom';
 import TranslatorResult from '../ui/TranslatorResult';
 import TranslatorButtons from '../ui/buttons/TranslatorButtons';
 
-const Translator = () => {
+const Translator = () => { // redirects to login-page if no user is found in session
     const user = getStorage('session');
-    const [currentTranslation, setCurrentTranslation] = useState('');
+    const [currentTranslation, setCurrentTranslation] = useState(''); // create state-variable for the current translation
 
-    const handleTranslationClick = (input) => {
+    const handleTranslationClick = (input) => { // handle the current translation
         setCurrentTranslation(input);
     }
 
