@@ -5,15 +5,16 @@ import './translatorTable.css';
 
 const TranslatorTable = () => {
 
-    const translations = getStorage('translations') || [];
+    const translations = getStorage('translations') || []; // create variable which gets the currently saved translations, or if none, an empty a array
     const collection = [];
     
-    translations.forEach(translation => {
+    translations.forEach(translation => { // for each translation, create an array of characters from that translation and then push both to a collection
+        translation = translation.replace(/\s+/g, '_').toLowerCase(); // spaces are being replaced with underscores
         let characters = Array.from(translation);
         collection.push({translation, characters});
     });
 
-    const listItems = collection.map((entry, index) => 
+    const listItems = collection.map((entry, index) => // for each entry in collection, create a listItem, prints the word and translated version to a tr-tag
     <tr key={index}>
         <td id="wordToTranslate">{entry.translation}</td>
         <td id="translation">{entry.characters.map((character, index) => <img key={index} src={images[character.toLowerCase()]} alt="1"/>)}</td>
