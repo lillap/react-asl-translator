@@ -9,6 +9,7 @@ const TranslatorTable = () => {
     const collection = [];
     
     translations.forEach(translation => {
+        translation = translation.replace(/\s+/g, '_').toLowerCase(); // spaces are being replaced with underscores
         let characters = Array.from(translation);
         collection.push({translation, characters});
     });
